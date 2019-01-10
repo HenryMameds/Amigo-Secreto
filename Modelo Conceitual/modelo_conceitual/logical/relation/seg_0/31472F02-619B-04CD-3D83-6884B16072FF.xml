@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Tem" directorySegmentName="seg_0" id="31472F02-619B-04CD-3D83-6884B16072FF">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>1EDAE02E-78BE-2219-6216-FDB45AF19398</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<sourcePk>C157BD8C-4EC2-9607-C8A4-008C28228BBD</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>CD840C64-189A-5D1A-583A-7B581A53E118</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>CEC033F7-E49F-FF22-E215-B0A45B7E8554</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8A544ADD-FE0F-9F6A-97D3-F51F2680B21F" name="SAAS_Adm">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>B2CE9570-730A-31C8-6B37-E04148282662</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd_adm" id="C8B734FD-9FE6-8725-CDAC-7E101B5585B2">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>9DA5B74F-A6B5-4313-8643-C4657E809E3E</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome_adm" id="D4AB2A4A-A15D-79FA-1259-02D6AA03A95F">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>7FCDDDF8-B78E-71B0-E2E8-66AF8C846BCD</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email_adm" id="CE885621-A88E-0163-DD0A-FBCE0FA5E98F">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>84339C51-6F50-7A2E-C4F0-E02089948E74</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="senha_adm" id="4D67BC37-DF85-BAEA-C62F-2AC48D433350">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>8B28C524-2461-642A-6762-866EB122BD75</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_cadastro" id="989114E5-5DA1-5428-794B-93B68DC2E441">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>090AFF54-A465-CEDD-1BED-9CAF89E8E391</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="99CCB028-74F6-7997-6C81-863FE4AE965A" name="SAAS_Adm PK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>CDAD7BD7-1F7F-D002-E705-BCE3FD65B47F</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C8B734FD-9FE6-8725-CDAC-7E101B5585B2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

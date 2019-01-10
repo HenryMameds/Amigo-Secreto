@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Recebe" directorySegmentName="seg_0" id="74BD0482-AE00-B88A-DD63-911DCDDEE8EE">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>BBB5A7EC-02E9-2319-BE44-4B58334B74B9</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<sourcePk>46E98DAC-BD9D-FF9E-892E-31A23D605163</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B46C8948-F935-520E-5434-1EBE9496C7A0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5CBE98D6-7F0A-C8AD-7539-049016414CA1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

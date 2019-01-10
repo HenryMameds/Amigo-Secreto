@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Teve" directorySegmentName="seg_0" id="1D8B0396-E22F-7922-E2C1-22D7CF2A412F">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>4D614086-6E03-456F-50A1-5C9EC666F2D8</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<sourcePk>C157BD8C-4EC2-9607-C8A4-008C28228BBD</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>CD840C64-189A-5D1A-583A-7B581A53E118</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>681C40E1-FFF4-B87F-6CAF-CE981604FE06</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

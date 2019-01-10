@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Escolhido" directorySegmentName="seg_0" id="05C1C640-755F-E2BA-8E6B-2CB26F9505DD">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>9E60581A-9DC9-91CD-5876-90529271413C</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<sourcePk>46E98DAC-BD9D-FF9E-892E-31A23D605163</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B46C8948-F935-520E-5434-1EBE9496C7A0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>681C40E1-FFF4-B87F-6CAF-CE981604FE06</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

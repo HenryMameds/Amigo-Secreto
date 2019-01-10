@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="681C40E1-FFF4-B87F-6CAF-CE981604FE06" name="Resultado">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>52A6F8D2-DB5B-ACC0-7C50-F72ED1BE95DE</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd_sorteio" id="61DC43F3-7BFB-5640-6616-CE2C68442230">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<generatorID>1D8B0396-E22F-7922-E2C1-22D7CF2A412F</generatorID>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>A9B6CDC3-F2EB-C3CE-7937-E04A35BD219D</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<referedAttribute>9AEBC27A-F4D5-FD90-5694-1FCF8305807E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd_participante" id="598F2EDD-DA98-9429-CA12-B17D3DD2FE61">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<generatorID>BC57FE74-6F70-1E47-7508-EC47B2FD1B01</generatorID>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>161DED91-2ED9-A780-4FD0-7DA7F7DBE529</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<referedAttribute>F59636F9-401C-1518-DA94-C5DA42C95DD1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd_participante1" id="0E903512-2FF6-B5F6-6C46-357D0D4CD90C">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<generatorID>05C1C640-755F-E2BA-8E6B-2CB26F9505DD</generatorID>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>CB79C9DB-8FC0-60B1-43E6-F0D49FE6679A</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<referedAttribute>F59636F9-401C-1518-DA94-C5DA42C95DD1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

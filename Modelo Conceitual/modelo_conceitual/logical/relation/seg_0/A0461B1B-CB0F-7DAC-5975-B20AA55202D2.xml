@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Faz" directorySegmentName="seg_0" id="A0461B1B-CB0F-7DAC-5975-B20AA55202D2">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>11A60A13-70DD-0DDC-0E74-E166E5C33BB3</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<sourcePk>99CCB028-74F6-7997-6C81-863FE4AE965A</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8A544ADD-FE0F-9F6A-97D3-F51F2680B21F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>CEC033F7-E49F-FF22-E215-B0A45B7E8554</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

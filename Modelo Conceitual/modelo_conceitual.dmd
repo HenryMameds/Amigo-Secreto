@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelo_conceitual" id="DF771610-27CF-21C5-36E0-879F128E1B16" version="3.5">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:11:59 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>DF771610-27CF-21C5-36E0-879F128E1B16</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="2FB2361C-2808-665D-ABDD-5193FF2F9F39">
+<designStoragePath>C:\Users\Inverno\Desktop\Scripts\Modelo Conceitual\modelo_conceitual</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

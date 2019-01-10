@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Fazv3" directorySegmentName="seg_0" id="4A0AED34-6D5E-2D9F-D32A-8E76D1CB7F72">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:13:08 UTC</createdTime>
+<ownerDesignName>modelo_conceitual</ownerDesignName>
+<importedID>0E7E7D8A-9C12-C962-4359-CF9B972EE2AD</importedID>
+<engineerTo>
+<item key="2FC72131-2E35-3223-EBE7-CAE378F05859" value="true"/>
+</engineerTo>
+<sourcePk>46E98DAC-BD9D-FF9E-892E-31A23D605163</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B46C8948-F935-520E-5434-1EBE9496C7A0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0474D1B7-2FFC-0733-DB18-91A10E84A5F9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
