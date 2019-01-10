@@ -1,0 +1,23 @@
+CREATE OR REPLACE PROCEDURE sp_delete_participante(
+vCod participante.cd_participante%type
+
+) IS
+vNome participante.nome_participante%type;
+BEGIN
+        
+    SELECT nome_participante INTO vNome FROM participante WHERE cd_participante = vCod;
+    
+    DELETE FROM participante WHERE cd_participante = vCod;
+    
+    DBMS_OUTPUT.PUT_LINE('Participante [' || vNome || '} apagado com sucesso.');
+    
+    EXCEPTION                 
+        WHEN NO_DATA_FOUND THEN
+
+            RAISE_APPLICATION_ERROR(-20001, 'Erro ao tentar apagar participante de código [' || vCod || ']' || chr(10) || 'Verifique se o codigo informado é válido.'); 
+
+        WHEN OTHERS THEN
+
+            RAISE_APPLICATION_ERROR(-20003, 'Erro desconhecido ao tentar apagar participante de código [' || vCod || ']');
+
+END sp_delete_participante;

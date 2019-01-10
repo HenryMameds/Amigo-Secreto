@@ -1,0 +1,69 @@
+DROP SEQUENCE faixa_cd_participante;
+CREATE SEQUENCE faixa_cd_participante
+START WITH 1
+INCREMENT BY 1
+MAXVALUE 999
+NOCACHE
+NOCYCLE;
+
+create or replace PROCEDURE sp_insert_participante(
+vNome participante.nome_participante%type
+,vApelido participante.apelido_participante%type
+,vSugestao participante.cd_sugestao%type
+,vDepartamento participante.cd_departamento%type
+
+) IS 
+
+vCod participante.cd_participante%type; 
+vCount number(5);
+vCountR number(5);
+erUnique EXCEPTION;
+erMax EXCEPTION;
+erFk EXCEPTION;
+PRAGMA EXCEPTION_INIT(erFk, -02291);
+BEGIN
+
+    SELECT COUNT(apelido_participante) INTO vCount FROM participante where apelido_participante = vApelido;
+    SELECT COUNT(*) INTO vCountR FROM participante;
+
+    IF (vCount > 0) THEN RAISE erUnique; END IF;
+    IF (vCountR >= 60) THEN RAISE erMax; END IF;
+
+    SELECT faixa_cd_participante.NEXTVAL INTO vCod from dual;
+
+    INSERT INTO participante 
+        (cd_participante, nome_participante, apelido_participante, dt_cadastro, cd_sugestao, cd_departamento)
+    VALUES
+        (vCod, vNome, vApelido, SYSDATE, vSugestao, vDepartamento);
+
+    DBMS_OUTPUT.PUT_LINE(' Participante [' || vNome || '] cadastrado com sucesso!');
+
+    EXCEPTION
+
+        WHEN DUP_VAL_ON_INDEX THEN
+
+            RAISE_APPLICATION_ERROR(-20000, 'Erro ao tentar cadastrar Participante [' || vNome || ']' || ' Codigo duplicado.');                 
+
+        WHEN NO_DATA_FOUND THEN
+
+            RAISE_APPLICATION_ERROR(-20001, 'Erro ao tentar cadastrar participante [' || vNome || ']' || chr(10) || 'Verifique se o codigo de'  
+                || chr(10) || 'Verifique se o codigo de Departamento ou Sugestão informados são válidos.'); 
+
+        WHEN erFK THEN
+
+        RAISE_APPLICATION_ERROR(-20002, 'Erro ao tentar cadastrar participante [' || vNome || ']' 
+            || chr(10) || 'Verifique se o codigo de Departamento ou Sugestão informados são válidos.'); 
+
+        WHEN erUnique THEN
+
+          RAISE_APPLICATION_ERROR(-20210, 'Erro ao tentar cadastrar apelido [' || vApelido || ']' || ' já está sendo utilizado!');
+
+        WHEN erMax THEN
+
+            RAISE_APPLICATION_ERROR(-20211, 'Erro ao tentar cadastrar participante [' || vNome || ']' || ' Número máximo de participantes é de 60.' );
+
+        WHEN OTHERS THEN
+
+            RAISE_APPLICATION_ERROR(-20003, 'Erro desconhecido ao tentar cadastrar participante [' || vNome || ']');
+
+END sp_insert_participante;
