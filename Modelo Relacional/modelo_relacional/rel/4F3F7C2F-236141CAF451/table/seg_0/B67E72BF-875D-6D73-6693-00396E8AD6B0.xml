@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B67E72BF-875D-6D73-6693-00396E8AD6B0" name="log_sorteio">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:24:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_log" id="FE0DBC11-7FA8-22EB-3CCB-C44D39EF4446">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:25:38 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="log_sorteio" id="3F19D1DE-87DB-C083-F82D-78E8E6A0C826">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:25:38 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

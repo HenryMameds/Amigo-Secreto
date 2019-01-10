@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="46E583C4-94B1-13B3-9D84-B255C3342A75" containerWithKeyObject="45E5FE29-C0E5-D10E-70C3-804BC62835FD" localFKIndex="14791238-B542-4CDD-68D6-8D588B822B2F" name="Resultado_Sorteio_FK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:24 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>1122F918-965E-933D-36FA-529293995FE9</importedID>
+<referredTableLongName>Sorteio</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CD5F4E76-5E0D-37D5-9A1A-D58A73B42F88</referredTableID>
+<keyObject>688BD69A-5DA0-E780-83FC-C78B9808837F</keyObject>
+<referredKeyID>688BD69A-5DA0-E780-83FC-C78B9808837F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_sorteio</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C3FE59BC-AACB-497E-DDE9-FD60C15772A0" name="Sugestao">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>24E12C8F-893F-3C71-B85D-EDB0AC649393</importedID>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_sugestao" id="B0953EFE-9A56-F659-54F9-256061789270">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>3AC80ACC-DA4D-9C63-C975-5A80D5864BC3</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sugestao" id="D61FC21F-C4A8-B154-1EAE-4B03608AA55F">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>8F712410-7FA5-C9D3-6C27-405346835BC3</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="77FCC3E6-D7DD-B95F-5780-6F8D0B2C1ADC" name="Sugestao_PK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>7F5FCFAD-33F0-24A8-E993-09761D621E3A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0953EFE-9A56-F659-54F9-256061789270"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

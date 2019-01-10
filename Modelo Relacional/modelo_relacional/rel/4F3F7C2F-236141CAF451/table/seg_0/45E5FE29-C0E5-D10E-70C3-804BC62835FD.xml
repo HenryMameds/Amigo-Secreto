@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="45E5FE29-C0E5-D10E-70C3-804BC62835FD" name="Resultado">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>1740A57B-473D-3883-CFDD-2F5C6B9B01FF</importedID>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Sorteio_cd_sorteio" id="9854035A-3D43-86DB-1C86-9936ED09C0E0">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>304100B7-F59D-41AD-0A3B-00A05B4CBED0</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="46E583C4-94B1-13B3-9D84-B255C3342A75" referredColumn="EF035AE9-DD7A-E970-9464-37533B463841"/>
+</associations>
+</Column>
+<Column name="cd_participante" id="2F2EFE84-401B-4696-B144-262E4D70935C">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>D89B8F41-BE55-EC6D-E003-96820EB4EE14</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0A74B91F-0F21-C27C-DBF9-7B4883189210" referredColumn="54025180-8C97-77FA-7222-3E0066FE9E8C"/>
+</associations>
+</Column>
+<Column name="amigo_secreto" id="9779005C-7A3F-1E6D-A580-7EA128EB53F7">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>CEC5C80A-3160-6F36-955A-54ACB7A656EF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FDB9BB41-E4AA-094A-7871-6FC191A99A67" referredColumn="54025180-8C97-77FA-7222-3E0066FE9E8C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ACBCC068-24EF-F83F-4DF8-1A380D7C6BD9" name="Resultado_PK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>E50F6EF8-CC87-D84D-D3AA-542487C62A2F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9779005C-7A3F-1E6D-A580-7EA128EB53F7"/>
+<colUsage columnID="9854035A-3D43-86DB-1C86-9936ED09C0E0"/>
+<colUsage columnID="2F2EFE84-401B-4696-B144-262E4D70935C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14791238-B542-4CDD-68D6-8D588B822B2F" name="Resultado_Sorteio_FK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:24 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9854035A-3D43-86DB-1C86-9936ED09C0E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C019EE63-D4C2-C221-6290-74A9A2863FD4" name="Resultado_Participante_FKv2">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:24 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9779005C-7A3F-1E6D-A580-7EA128EB53F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="21C0DDDB-1282-93DE-46A6-41A2BDAB5C5F" name="Resultado_Participante_FK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:24 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F2EFE84-401B-4696-B144-262E4D70935C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CC0FBCD3-FBC7-55BE-3F01-75A08CEF56BF" containerWithKeyObject="2809CBC3-932E-E3D6-D685-6C65C84EB798" localFKIndex="C05C3D67-CA42-065F-4FE7-5B24CC69A7AE" name="Aviso_SAAS_Adm_FK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:24 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>F68000BF-F5F1-52E6-CB6A-174E24B52107</importedID>
+<referredTableLongName>SAAS_Adm</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E2218098-8D4F-470A-DBB9-DAF0E0ED0B35</referredTableID>
+<keyObject>F18555E7-20ED-7AA1-5422-9384151ECA82</keyObject>
+<referredKeyID>F18555E7-20ED-7AA1-5422-9384151ECA82</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_adm</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

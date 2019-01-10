@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="ACC135E8-A993-B93C-6894-A5C8EB3160FE" containerWithKeyObject="DCF7EDED-FC95-A184-5F17-EA8555EBE660" localFKIndex="C5075828-D62A-1E33-1D5A-3A999B487319" name="Participante_Sugestao_FK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:24 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>5371E1E3-09C9-435A-4928-C0FD47313869</importedID>
+<referredTableLongName>Sugestao</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C3FE59BC-AACB-497E-DDE9-FD60C15772A0</referredTableID>
+<keyObject>77FCC3E6-D7DD-B95F-5780-6F8D0B2C1ADC</keyObject>
+<referredKeyID>77FCC3E6-D7DD-B95F-5780-6F8D0B2C1ADC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_sugestao</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

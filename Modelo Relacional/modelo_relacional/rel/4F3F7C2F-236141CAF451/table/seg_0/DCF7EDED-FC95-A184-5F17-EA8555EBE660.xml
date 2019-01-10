@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DCF7EDED-FC95-A184-5F17-EA8555EBE660" name="Participante">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>B571C530-9B5E-1B01-D8B3-05938DAF8E8E</importedID>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_participante" id="54025180-8C97-77FA-7222-3E0066FE9E8C">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>67024479-42B9-899A-3270-DB3E67616A27</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome_participante" id="AFCF3793-535E-3686-A84E-052986FBECDC">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>CC644C5C-6783-08E9-5F29-5F6DD4B7A704</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apelido_participante" id="092FDE61-0457-23C0-4803-04574292EC5E">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>5EB91E48-673B-4645-C03A-33B6F9EBBC9B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_cadastro" id="8C335FCE-D22D-0414-AFBC-5D2B4B2E356B">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>515FFD8E-C92E-C0A2-01A7-3AC905571D43</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_sugestao" id="11035F61-AE28-0C79-D2A0-748EF4F31ACA">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>BFD88C3F-B60B-8872-7032-863F1177705F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ACC135E8-A993-B93C-6894-A5C8EB3160FE" referredColumn="B0953EFE-9A56-F659-54F9-256061789270"/>
+</associations>
+</Column>
+<Column name="cd_departamento" id="87B7656D-0A73-CAA1-F219-250A96F87140">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>D79DF339-E461-03D7-044D-10DD4AB57ED9</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5545C867-F017-99BC-2E67-50758C6E8469" referredColumn="2CAA1229-B725-547C-A5F0-09543795EE6D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FE99FDE3-4A4B-AE89-B952-B6F11737F972" name="Participante_PK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>50406C9E-0148-6B60-F041-F5F71E921B8E</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54025180-8C97-77FA-7222-3E0066FE9E8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5075828-D62A-1E33-1D5A-3A999B487319" name="Participante_Sugestao_FK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:24 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="11035F61-AE28-0C79-D2A0-748EF4F31ACA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3121D0C3-6FE8-7481-3AFF-6C2173773175" name="Participante_Departamento_FK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:24 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="87B7656D-0A73-CAA1-F219-250A96F87140"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

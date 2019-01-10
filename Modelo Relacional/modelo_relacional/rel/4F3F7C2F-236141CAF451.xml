@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Der" id="4F3F7C2F-9FB4-5AAF-C174-236141CAF451" mainViewID="398FD6E9-6930-9DCE-6799-2C0A9C8663F2">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:21 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

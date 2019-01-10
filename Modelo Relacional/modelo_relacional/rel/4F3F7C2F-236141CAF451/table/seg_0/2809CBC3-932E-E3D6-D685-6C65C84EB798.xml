@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2809CBC3-932E-E3D6-D685-6C65C84EB798" name="Aviso">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>428004D1-2130-FA32-368C-F56711EA10D2</importedID>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_aviso" id="6AC6FA5F-0B33-2A77-76FA-16CD1AE21C26">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>E3E8DE5A-574E-5B15-4DD9-31DD91369608</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="aviso" id="36190E16-9EC2-9E1F-07F7-F368631F2025">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>A83A249B-101A-04DB-92BA-AFB2E2A0FF80</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_aviso" id="45429CC0-9457-CCAA-27DD-F14A9391AB75">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>7254A1F9-6FEB-06B9-D8C8-D2F048CEA051</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_adm" id="3D76202A-64E3-880B-3373-3586B9537D90">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>FA1E1FD7-C2F1-B4A5-7843-1772C89B0F78</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CC0FBCD3-FBC7-55BE-3F01-75A08CEF56BF" referredColumn="3B7AE2F1-A538-50F8-DF2D-E117867AC877"/>
+</associations>
+</Column>
+<Column name="cd_sorteio" id="2D75CFB6-A207-DAC2-9E5C-405641A39F60">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>7F2F03EB-BF7A-A71D-0620-A85364C76402</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81DD26EB-1115-9A2B-C681-117FC9CAB0E5" referredColumn="EF035AE9-DD7A-E970-9464-37533B463841"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="604C3FF7-3EA4-C64C-97FA-6EB34503F5BE" name="Aviso_PK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>16745CDB-7DF5-3304-CF45-867C0BB9527F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6AC6FA5F-0B33-2A77-76FA-16CD1AE21C26"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C05C3D67-CA42-065F-4FE7-5B24CC69A7AE" name="Aviso_SAAS_Adm_FK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:24 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3D76202A-64E3-880B-3373-3586B9537D90"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="741A0352-3852-1FB1-2B6A-97F87E8A3D5C" name="Aviso_Sorteio_FK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:24 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D75CFB6-A207-DAC2-9E5C-405641A39F60"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

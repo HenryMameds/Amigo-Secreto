@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CD5F4E76-5E0D-37D5-9A1A-D58A73B42F88" name="Sorteio">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>FDD536BA-0CEF-0413-1BFF-130C576DB775</importedID>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_sorteio" id="EF035AE9-DD7A-E970-9464-37533B463841">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>FE515265-F63E-4D39-4C51-A4FEFA61F6DF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="edicao_sorteio" id="DA3E3CC4-A1C4-0136-F7EA-7AF7BDE2EAB0">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>3E25032B-AED9-FAB9-1E0D-4FC1358D2CF1</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_inicio_sorteio" id="A0655082-5275-DBA4-7C5B-509D8C1B6D2F">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>8BDBB549-7F14-2FBC-370A-F8C220F3CED8</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_final_sorteio" id="42326D0A-2997-2DF9-9809-584C68882548">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>EBA187AC-E626-A02A-FC11-468C5937B12B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="688BD69A-5DA0-E780-83FC-C78B9808837F" name="Sorteio_PK">
+<createdBy>Inverno</createdBy>
+<createdTime>2018-06-01 18:23:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional</ownerDesignName>
+<importedID>E27FE206-FF9F-2212-78CB-2C6805E1FABF</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF035AE9-DD7A-E970-9464-37533B463841"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
