@@ -1,0 +1,67 @@
+-- Select Departamento
+SELECT LPAD(cd_departamento, 2, '0') CD, nome_departamento Departamento, ramal FROM departamento;
+
+-- Select Sugestão
+SELECT LPAD(cd_sugestao, 5, '0') CD, sugestao "Sugestão" FROM sugestao;
+
+-- Select Participante 
+SELECT LPAD(p.cd_participante, 8, '0') CD, p.nome_participante Nome, p.apelido_participante Apelido
+,s.sugestao "Sugestão", d.nome_departamento Departamento, d.ramal, p.dt_cadastro "DT Cadastro" 
+FROM participante p INNER JOIN sugestao s ON (p.cd_sugestao = s.cd_sugestao)
+INNER JOIN departamento d ON (p.cd_departamento = d.cd_departamento);
+
+-- Select saas_adm
+SELECT LPAD(cd_adm, 2, '0') CD, nome_adm Nome, email_adm "E-Mail", senha_adm Senha, dt_cadastro "DT Cadastro"
+FROM saas_adm;
+
+-- Select aviso
+SELECT LPAD(a.cd_aviso, 5, '0') CD, a.aviso , a.dt_aviso "Data", ad.nome_adm "ADM", s.edicao_sorteio "Ed. Sorteio"
+FROM aviso a INNER JOIN saas_adm ad ON (a.cd_adm = ad.cd_adm)
+INNER JOIN sorteio s ON (a.cd_sorteio = s.cd_sorteio);
+
+-- Select Sorteio
+SELECT LPAD(cd_sorteio, 3, '0') CD, edicao_sorteio "Edição Sorteio", dt_inicio_sorteio Inicio, dt_final_sorteio Fim 
+FROM Sorteio;
+
+-- Select mensagem TODAS
+SELECT LPAD(m.cd_mensagem,5 , '0')  CD, m.mensagem, m.dt_mensagem Data,
+NVL(p.apelido_participante, 'Notificação Automática') Origem, pa.apelido_participante Destino
+FROM mensagem m LEFT JOIN participante p ON(m.origem_mensagem = p.cd_participante)
+INNER JOIN participante pa ON(m.destino_mensagem = pa.cd_participante);
+
+-- Select mensagem Apenas troca de mensagens entre os participantes 
+SELECT LPAD(m.cd_mensagem,5 , '0')  CD, m.mensagem, m.dt_mensagem Data,
+p.apelido_participante Origem, pa.apelido_participante Destino
+FROM mensagem m INNER JOIN participante p ON(m.origem_mensagem = p.cd_participante)
+INNER JOIN participante pa ON(m.destino_mensagem = pa.cd_participante);
+
+select count(*) "TOTAL DE MENSAGEM" from mensagem
+
+select m.origem_mensagem, p.apelido_participante, DENSE_RANK() over (order by origem_mensagem) as Quem_enviou_mais_mensagem from mensagem m
+join participante p on p.cd_participante = m.origem_mensagem
+GROUP BY 
+m.origem_mensagem, p.apelido_participante
+
+select m.destino_mensagem, p.apelido_participante, DENSE_RANK() over (order by destino_mensagem) as Quem_recebeu_mais_mensagem from mensagem m
+join participante p on p.cd_participante = m.destino_mensagem
+GROUP BY 
+m.destino_mensagem, p.apelido_participante
+
+-- Select avaliacao
+SELECT LPAD(a.cd_avaliacao, 5, '0') CD, trim(a.nota_avalicao) Nota, a.avalicao "Avaliação", p.nome_participante "Participante"
+FROM avaliacao a INNER JOIN participante p ON (a.cd_participante = p.cd_participante);
+
+-- Select resultado/Lista de quem tirou quem com apelidos
+SELECT LPAD(r.sorteio_cd_sorteio, 3, '0') Sorteio, p.apelido_participante Participante, pa.apelido_participante "AMG SECRETO", s.edicao_sorteio "Edição"
+FROM resultado r INNER JOIN participante p ON (r.cd_participante = p.cd_participante)
+INNER JOIN participante pa ON (r.amigo_secreto = pa.cd_participante)
+INNER JOIN sorteio s ON (r.sorteio_cd_sorteio = s.cd_sorteio); 
+
+-- Select resultado/Lista de quem tirou quem com nomes (opcional para utilizar no final do sorteio, caso necessário)
+SELECT LPAD(r.sorteio_cd_sorteio, 3, '0') Sorteio, p.nome_participante Participante, pa.nome_participante "AMG SECRETO", s.edicao_sorteio "Edição"
+FROM resultado r INNER JOIN participante p ON (r.cd_participante = p.cd_participante)
+INNER JOIN participante pa ON (r.amigo_secreto = pa.cd_participante)
+INNER JOIN sorteio s ON (r.sorteio_cd_sorteio = s.cd_sorteio); 
+
+-- Select de Apelidos(codinomes) e seus respectivos participantes
+SELECT nome_participante Nome, apelido_participante Apelido FROM participante;
