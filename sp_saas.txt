@@ -1,0 +1,104 @@
+create or replace PROCEDURE sp_saas(
+vSorteio resultado.sorteio_cd_sorteio%type
+
+) IS
+CURSOR c_participante IS SELECT cd_participante, apelido_participante FROM participante;
+v_participante c_participante%ROWTYPE;
+vParticipante resultado.cd_participante%type;
+vAmigo_Secreto resultado.amigo_secreto%type;
+vCount number(5);
+vLog number(5);
+vLog_Sorteio log_sorteio.log_sorteio%type;
+vApelido participante.apelido_participante%type; 
+vApelido_Amg vApelido%type;
+vEdi sorteio.edicao_sorteio%type;
+erPar EXCEPTION; 
+vPar number(3);
+BEGIN
+
+    SELECT COUNT(*) INTO vPar FROM participante;
+    IF MOD(vpar, 2) != 0 THEN RAISE erpar; END IF;
+
+    --DELETE FROM resultado WHERE sorteio_cd_sorteio = vSorteio;
+    OPEN c_participante;
+        LOOP
+            FETCH c_participante INTO v_participante;
+            EXIT WHEN c_participante%NOTFOUND;
+
+            vApelido := v_participante.apelido_participante;
+
+			SELECT cd_participante INTO vAmigo_Secreto FROM 
+            (SELECT cd_participante FROM participante ORDER BY DBMS_RANDOM.VALUE) WHERE ROWNUM = 1;
+
+            SELECT COUNT(amigo_secreto) INTO vCount FROM resultado WHERE amigo_secreto = vAmigo_Secreto AND sorteio_cd_sorteio = vSorteio;
+
+            SELECT log_sorteio INTO vLog_Sorteio FROM log_sorteio where cd_log = 1;
+
+            IF(vLog_sorteio < 4) THEN
+                SELECT COUNT(cd_participante) INTO vLog FROM resultado WHERE amigo_secreto = vAmigo_Secreto AND cd_participante = v_participante.cd_participante;
+
+            ELSE
+
+            vLog := 0;
+
+
+            END IF;
+			--Para Impedir que participante tire ele mesmo e verificar se amigo secreto está disponível.
+            WHILE(vAmigo_Secreto = v_participante.cd_participante OR vCount > 0 OR vLog > 0)
+                LOOP
+
+                    SELECT cd_participante INTO vAmigo_Secreto FROM 
+                    (SELECT cd_participante FROM participante ORDER BY DBMS_RANDOM.VALUE) WHERE ROWNUM = 1; 
+
+                    SELECT COUNT(amigo_secreto) INTO vCount FROM resultado where amigo_secreto = vAmigo_Secreto AND sorteio_cd_sorteio = vSorteio;
+
+                    IF(vLog_sorteio < 4) THEN
+                        SELECT COUNT(cd_participante) INTO vLog FROM resultado WHERE amigo_secreto = vAmigo_Secreto AND cd_participante = v_participante.cd_participante;
+
+                    ELSE 
+
+                        vLog := 0;                        
+
+                    END IF;
+
+            END LOOP;        
+
+           INSERT INTO resultado
+                (sorteio_cd_sorteio, cd_participante, amigo_secreto)
+            VALUES
+                (vSorteio, v_participante.cd_participante, vAmigo_Secreto);
+
+            SELECT apelido_participante INTO vApelido_Amg  FROM participante WHERE cd_participante = vAmigo_Secreto;
+            SELECT edicao_sorteio INTO vEdi FROM Sorteio WHERE cd_sorteio = vSorteio;
+
+            INSERT INTO mensagem 
+            (cd_mensagem, mensagem, dt_mensagem, destino_mensagem)
+            VALUES
+            (faixa_cd_mensagem.NEXTVAL, 'Olá ' || vApelido || ' seu amigo secreto é: ' || vApelido_Amg || ' - Sorteio: ' || vEdi, SYSDATE, v_participante.cd_participante);
+
+			DBMS_OUTPUT.PUT_LINE('Participante ' || v_participante.cd_participante || ' - [' || vApelido || '] Amigo Secreto: ' || vApelido_Amg );
+
+        END LOOP;
+    CLOSE c_participante;
+
+    IF(vLog_sorteio < 4) THEN
+        UPDATE LOG_SORTEIO SET log_sorteio = log_sorteio + 1 WHERE cd_log = 1;
+        ELSE
+        UPDATE log_sorteio SET log_sorteio = 0 WHERE cd_log = 1;
+    END IF;
+
+    EXCEPTION
+
+    WHEN NO_DATA_FOUND THEN
+
+         RAISE_APPLICATION_ERROR(-20001, 'Erro ao tentar iniciar sorteio automático, verifique se o codigo [' || vSorteio || '] é válido, se for consulte o log.');
+
+    WHEN erPar THEN
+
+        RAISE_APPLICATION_ERROR(-20217, 'Erro ao tentar iniciar sorteio automático, número de participantes precisa ser par. Total de participantes cadastrados [' || vPar || ']');
+
+    WHEN OTHERS THEN
+
+            RAISE_APPLICATION_ERROR(-20003, 'Erro desconhecido ao tentar iniciar sorteio automático!');
+
+END sp_saas;
