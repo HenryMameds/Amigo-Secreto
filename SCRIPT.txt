@@ -1,0 +1,148 @@
+-- Para:  Oracle Database 11g
+
+DROP TABLE avaliacao CASCADE CONSTRAINTS;
+CREATE TABLE avaliacao (
+    cd_avaliacao      NUMBER(5) NOT NULL,
+    nota_avaliacao     REAL NOT NULL,
+    avaliacao         VARCHAR2(250),
+    cd_participante   NUMBER(8) NOT NULL
+);
+
+ALTER TABLE avaliacao ADD CONSTRAINT avaliacao_pk PRIMARY KEY ( cd_avaliacao );
+
+DROP TABLE aviso CASCADE CONSTRAINTS;
+CREATE TABLE aviso (
+    cd_aviso     NUMBER(5) NOT NULL,
+    aviso        VARCHAR2(250) NOT NULL,
+    dt_aviso     DATE NOT NULL,
+    cd_adm       NUMBER(2) NOT NULL,
+    cd_sorteio   NUMBER(3) NOT NULL
+);
+
+ALTER TABLE aviso ADD CONSTRAINT aviso_pk PRIMARY KEY ( cd_aviso );
+
+DROP TABLE departamento CASCADE CONSTRAINTS;
+CREATE TABLE departamento (
+    cd_departamento     NUMBER(2) NOT NULL,
+    nome_departamento   VARCHAR2(60) NOT NULL UNIQUE,
+    ramal               VARCHAR2(20) NOT NULL
+);
+
+ALTER TABLE departamento ADD CONSTRAINT departamento_pk PRIMARY KEY ( cd_departamento );
+
+DROP TABLE mensagem CASCADE CONSTRAINTS;
+CREATE TABLE mensagem (
+    cd_mensagem        NUMBER(5) NOT NULL,
+    mensagem           VARCHAR2(250) NOT NULL,
+    dt_mensagem        DATE NOT NULL,
+    origem_mensagem    NUMBER(8),
+    destino_mensagem   NUMBER(8) NOT NULL
+);
+
+ALTER TABLE mensagem ADD CONSTRAINT mensagem_pk PRIMARY KEY ( cd_mensagem );
+
+DROP TABLE participante CASCADE CONSTRAINTS;
+CREATE TABLE participante (
+    cd_participante        NUMBER(8) NOT NULL,
+    nome_participante      VARCHAR2(60) NOT NULL,
+    apelido_participante   VARCHAR2(25) UNIQUE NOT NULL,
+    dt_cadastro            DATE NOT NULL,
+    cd_sugestao            NUMBER(5) NOT NULL,
+    cd_departamento        NUMBER(2) NOT NULL
+);
+
+ALTER TABLE participante ADD CONSTRAINT participante_pk PRIMARY KEY ( cd_participante );
+
+DROP TABLE resultado CASCADE CONSTRAINTS;
+CREATE TABLE resultado (
+    sorteio_cd_sorteio   NUMBER(3) NOT NULL,
+    cd_participante      NUMBER(8) NOT NULL,
+    amigo_secreto        NUMBER(8) NOT NULL
+);
+
+ALTER TABLE resultado
+    ADD CONSTRAINT resultado_pk PRIMARY KEY ( amigo_secreto,sorteio_cd_sorteio,cd_participante );
+
+DROP TABLE saas_adm CASCADE CONSTRAINTS;
+CREATE TABLE saas_adm (
+    cd_adm        NUMBER(2) NOT NULL,
+    nome_adm      VARCHAR2(60) NOT NULL,
+    email_adm     VARCHAR2(50) UNIQUE NOT NULL,
+    senha_adm     VARCHAR2(100) NOT NULL,
+    dt_cadastro   DATE NOT NULL
+);
+
+ALTER TABLE saas_adm ADD CONSTRAINT saas_adm_pk PRIMARY KEY ( cd_adm );
+
+DROP TABLE sorteio CASCADE CONSTRAINTS;
+CREATE TABLE sorteio (
+    cd_sorteio          NUMBER(3) NOT NULL,
+    edicao_sorteio      VARCHAR2(25) UNIQUE NOT NULL,
+    dt_inicio_sorteio   DATE NOT NULL,
+    dt_final_sorteio    DATE NOT NULL
+);
+
+ALTER TABLE sorteio ADD CONSTRAINT sorteio_pk PRIMARY KEY ( cd_sorteio );
+
+DROP TABLE sugestao CASCADE CONSTRAINTS;
+CREATE TABLE sugestao (
+    cd_sugestao   NUMBER(5) NOT NULL,
+    sugestao      VARCHAR2(250) NOT NULL
+);
+
+DROP TABLE log_sorteio CASCADE CONSTRAINTS;
+CREATE TABLE log_sorteio (
+    cd_log          NUMBER(3) NOT NULL,
+    log_sorteio     NUMBER(3) NOT NULL
+);
+
+ALTER TABLE log_sorteio ADD CONSTRAINT log_sorteio_pk PRIMARY KEY ( cd_log );
+
+
+ALTER TABLE sugestao ADD CONSTRAINT sugestao_pk PRIMARY KEY ( cd_sugestao );
+
+ALTER TABLE avaliacao
+    ADD CONSTRAINT avaliacao_participante_fk FOREIGN KEY ( cd_participante )
+        REFERENCES participante ( cd_participante );
+
+ALTER TABLE avaliacao
+ADD CONSTRAINT check_avaliacao_nota_avaliacao
+  CHECK (nota_avaliacao <= 5 );
+
+ALTER TABLE aviso
+    ADD CONSTRAINT aviso_saas_adm_fk FOREIGN KEY ( cd_adm )
+        REFERENCES saas_adm ( cd_adm );
+
+ALTER TABLE aviso
+    ADD CONSTRAINT aviso_sorteio_fk FOREIGN KEY ( cd_sorteio )
+        REFERENCES sorteio ( cd_sorteio );
+
+ALTER TABLE mensagem
+    ADD CONSTRAINT mensagem_participante_fk FOREIGN KEY ( origem_mensagem )
+        REFERENCES participante ( cd_participante );
+
+ALTER TABLE mensagem
+    ADD CONSTRAINT mensagem_participante_fkv2 FOREIGN KEY ( destino_mensagem )
+        REFERENCES participante ( cd_participante );
+
+ALTER TABLE participante
+    ADD CONSTRAINT participante_departamento_fk FOREIGN KEY ( cd_departamento )
+        REFERENCES departamento ( cd_departamento );
+
+ALTER TABLE participante
+    ADD CONSTRAINT participante_sugestao_fk FOREIGN KEY ( cd_sugestao )
+        REFERENCES sugestao ( cd_sugestao );
+
+ALTER TABLE resultado
+    ADD CONSTRAINT resultado_participante_fk FOREIGN KEY ( cd_participante )
+        REFERENCES participante ( cd_participante );
+
+ALTER TABLE resultado
+    ADD CONSTRAINT resultado_participante_fkv2 FOREIGN KEY ( amigo_secreto )
+        REFERENCES participante ( cd_participante );
+
+ALTER TABLE resultado
+    ADD CONSTRAINT resultado_sorteio_fk FOREIGN KEY ( sorteio_cd_sorteio )
+        REFERENCES sorteio ( cd_sorteio );
+
+------ FIM -------
