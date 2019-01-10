@@ -1,0 +1,153 @@
+----- INSERT DEPARTAMENTO -----
+
+INSERT INTO departamento VALUES(1, 'DIRETORIA', '1111');
+INSERT INTO departamento VALUES(2, 'VENDAS', '2222');
+INSERT INTO departamento VALUES(3, 'LIMPAR', '3333');
+INSERT INTO departamento VALUES(4, 'LOGÍSTICA', '4444');
+INSERT INTO departamento VALUES(5, 'MARKETING', '5555');
+INSERT INTO departamento VALUES(6, 'RECURSOS HUMANOS', '6666');
+INSERT INTO departamento VALUES(7, 'TI', '7777');
+INSERT INTO departamento VALUES(8, 'EHS', '8888');
+INSERT INTO departamento VALUES(9, 'SUPPYCHAiN', '9999');
+INSERT INTO departamento VALUES(10, 'WCM', '1119');
+
+---- INSERT SUGESTAO ----- 
+
+INSERT INTO SUGESTAO VALUES(1, 'Jogo'); 
+INSERT INTO SUGESTAO VALUES(2, 'Caneca');
+INSERT INTO SUGESTAO VALUES(3, 'Chocolate');
+INSERT INTO SUGESTAO VALUES(4, 'Perfume');
+INSERT INTO SUGESTAO VALUES(5, 'Relógio');
+INSERT INTO SUGESTAO VALUES(6, 'Roupa');
+INSERT INTO SUGESTAO VALUES(7, 'HQ');
+INSERT INTO SUGESTAO VALUES(8, 'Carteira');
+INSERT INTO SUGESTAO VALUES(9, 'DVD');
+INSERT INTO SUGESTAO VALUES(10, 'Livro');
+
+
+---- INSERT PARTICIPANTE ----
+
+EXEC sp_insert_participante('Pollyana', 'Fwyz_', 10, 9);
+EXEC sp_insert_participante('Guilherme', 'Bola de Neve', 10, 1);
+EXEC sp_insert_participante('Isabel', 'Wasabe', 4, 2);
+EXEC sp_insert_participante('Cleber', 'Binhoc', 2, 3);
+EXEC sp_insert_participante('Henrique', 'Joker1300', 5, 7);
+EXEC sp_insert_participante('Ingrid', 'Brito', 4, 5);
+EXEC sp_insert_participante('Pedro', 'Boss', 1, 9);
+EXEC sp_insert_participante('Enzo', 'DogMeat', 10, 5);
+EXEC sp_insert_participante('Sofia', 'Shiver', 6, 3);
+EXEC sp_insert_participante('Alexandre', 'Musken', 3, 2);
+EXEC sp_insert_participante('Raimundo', 'Stauker', 8, 1);
+EXEC sp_insert_participante('Glória', 'Indominus', 10, 10);
+EXEC sp_insert_participante('Lucas', 'Akinori', 4, 7);
+EXEC sp_insert_participante('Davi', 'PayDay', 5, 1);
+EXEC sp_insert_participante('Ana', 'Aurora', 4, 2);
+EXEC sp_insert_participante('Miguel', 'Olimpia', 8, 4);
+EXEC sp_insert_participante('Larissa', 'Gaia', 9, 6);
+EXEC sp_insert_participante('Thays', 'Batatah', 4, 6);
+EXEC sp_insert_participante('João', 'Kuryuu', 1, 7);
+EXEC sp_insert_participante('Robô', 'Escravo', 9, 4);
+EXEC sp_insert_participante('Beatriz', 'ChequeMate', 5, 3);
+EXEC sp_insert_participante('Isabela', 'Smoke', 8, 5);
+EXEC sp_insert_participante('Camila', 'Whiskey', 2, 3);
+EXEC sp_insert_participante('Valentina', 'Scorpion', 7, 5);
+EXEC sp_insert_participante('Lara', 'Torpedo', 4, 8);
+EXEC sp_insert_participante('Bruno', 'Sniper', 6, 4);
+EXEC sp_insert_participante('Francisco', 'Exterminator', 7, 1);
+EXEC sp_insert_participante('Hecthor', 'Clyrene', 2, 8);
+EXEC sp_insert_participante('Vinicios', 'Pandora', 4, 3);
+EXEC sp_insert_participante('Alex', 'Ostara', 9, 10);
+EXEC sp_insert_participante('Rodrigo', 'Europa', 10, 6);
+EXEC sp_insert_participante('José', 'Debie', 7, 3);
+EXEC sp_insert_participante('Ramon', 'Bayssa', 2, 10);
+EXEC sp_insert_participante('Raniele', 'Athenas', 9, 7);
+EXEC sp_insert_participante('Felipe', 'Gueidy', 7, 6);
+EXEC sp_insert_participante('Cesar', 'Bitterman', 1, 2);
+EXEC sp_insert_participante('Victor', 'Overtaker', 1, 1);
+EXEC sp_insert_participante('Jackllyne', 'Isis', 6, 6);
+EXEC sp_insert_participante('Robson', 'Jaguar', 5, 4);
+EXEC sp_insert_participante('Cristiano', 'Prodigy', 2, 10);
+EXEC sp_insert_participante('Thiago', 'Zombie', 10, 10);
+EXEC sp_insert_participante('Geovana', 'Falcão', 7, 7);
+EXEC sp_insert_participante('Manoel', 'Napoleon', 9, 1);
+EXEC sp_insert_participante('Emanuele', 'Coyote', 7, 6);
+EXEC sp_insert_participante('Fabiola', 'Rocks', 7, 9);
+EXEC sp_insert_participante('Karen', 'Naoki', 4, 4);
+EXEC sp_insert_participante('Maria', 'Kaikez', 6, 2);
+EXEC sp_insert_participante('Yasmin', 'Astor', 7, 8);
+EXEC sp_insert_participante('Sophia', 'Clare', 5, 6);
+EXEC sp_insert_participante('Lorenzo', 'Epeu', 10, 10);
+EXEC sp_insert_participante('Samuel', 'Deangenes', 6, 9);
+EXEC sp_insert_participante('Nicolas', 'Bauli', 1, 1);
+EXEC sp_insert_participante('Levi', 'Célico', 3, 2);
+EXEC sp_insert_participante('Erick', 'Celerino', 6, 7);
+EXEC sp_insert_participante('Bruna', 'Forever Alone', 9, 6);
+EXEC sp_insert_participante('Isadora', 'TheInsecure', 4, 4);
+EXEC sp_insert_participante('Artur', 'Physicz07', 7, 8);
+EXEC sp_insert_participante('Ryan', 'GiveAss', 9, 10);
+EXEC sp_insert_participante('Jennifer', 'Snake', 6, 3);
+EXEC sp_insert_participante('Ágata', 'Shadow', 10, 3);
+
+---- INSERT MENSAGEM ----
+EXEC sp_mensagem ('Oi, tudo? O que estar achando do amigo secreto?', 1, 5);
+EXEC sp_mensagem ('Nossa não vejo a hora de reber o meu presente', 2, 7);
+EXEC sp_mensagem ('O que você gostaria de receber?', 6, 8);
+EXEC sp_mensagem ('Estou ansioso para comecar a entrega de presentes', 1, 10);
+EXEC sp_mensagem ('Séra que tirei vc?', 8, 5);
+EXEC sp_mensagem ('Meu amigo, como vc está?', 1, 33);
+EXEC sp_mensagem ('Como está indo o seu trabalho no novo departamento?', 2, 6);
+EXEC sp_mensagem ('Não estou muito bem hoje. Vamos sair para almoçar?', 10, 5);
+EXEC sp_mensagem ('Hoje acordei animado para jogar LOL, quer jogar cmg?', 22, 10);
+EXEC sp_mensagem ('Não quero mais trabalho só ficar de boas em casa, kkkkkkkkkkkkkk', 1, 5);
+
+---- INSERT SORTEIO ----
+INSERT INTO sorteio VALUES(1, '1° Edição', '01-05-2018', '29-05-2018');
+INSERT INTO sorteio VALUES(2, '2° Edição', '01-06-2018', '29-06-2018');
+INSERT INTO sorteio VALUES(3, '3° Edição', '01-07-2018', '29-07-2018');
+INSERT INTO sorteio VALUES(4, '4° Edição', '01-08-2018', '29-08-2018');
+INSERT INTO sorteio VALUES(5, '5° Edição', '01-09-2018', '29-09-2018');
+INSERT INTO sorteio VALUES(6, '6° Edição', '01-10-2018', '29-10-2018');
+INSERT INTO sorteio VALUES(7, '7° Edição', '01-11-2018', '29-11-2018');
+INSERT INTO sorteio VALUES(8, '8° Edição', '01-12-2018', '29-12-2018');
+INSERT INTO sorteio VALUES(9, '9° Edição', '01-01-2019', '29-01-2019');
+INSERT INTO sorteio VALUES(10, '10° Edição', '01-02-2019', '28-02-2019');
+
+---- INSERT saas_adm ----
+INSERT INTO saas_adm VALUES(1, 'Guilherme Correa', 'gui@mail.com', '1234', SYSDATE);
+INSERT INTO saas_adm VALUES(2, 'Alexssandro Antunes' , 'alex@mail.com', '4321', SYSDATE);
+INSERT INTO saas_adm VALUES(3, 'Tainá Santos', 'tay@mail.com', '1234', SYSDATE);
+INSERT INTO saas_adm VALUES(4, 'Cinthya Gomes', 'cin@mail.com', '4321', SYSDATE);
+INSERT INTO saas_adm VALUES(5, 'Sabrina Gomes', 'sab@mail.com', '1234', SYSDATE);
+INSERT INTO saas_adm VALUES(6, 'Amauri Lira', 'ama@mail.com', '4321', SYSDATE);
+INSERT INTO saas_adm VALUES(7, 'Vera Lúcia', 'velu@mail.com', '1234', SYSDATE);
+INSERT INTO saas_adm VALUES(8, 'Paulo Correa', 'pac@mail.com', '4321', SYSDATE);
+INSERT INTO saas_adm VALUES(9, 'Gollum Oly', 'gol@mail.com', '1234', SYSDATE);
+INSERT INTO saas_adm VALUES(10, 'Denis Carvalho', 'den@mail.com', '4321', SYSDATE);
+
+---- INSERT AVISO -----
+INSERT INTO aviso VALUES(1, 'Atenção: número máximo de participantes 60', SYSDATE, 1, 1);
+INSERT INTO aviso VALUES(2, 'Fique atento a sugestão de presente para seu amigo secreto!',SYSDATE, 1, 1);
+INSERT INTO aviso VALUES(3, '1° Edição do sorteio começa em breve', SYSDATE, 1, 1);
+INSERT INTO aviso VALUES(4, 'Não divulgue informações pessoais nas mensagens', SYSDATE, 1, 1);
+INSERT INTO aviso VALUES(5, 'Mantenha sígilo sobre a identidade do seu amigo secreto',SYSDATE, 1, 1);
+INSERT INTO aviso VALUES(6, '1° Edição do sorteio está para começar!', SYSDATE, 1, 1);
+INSERT INTO aviso VALUES(7, 'Chocolate está popular entre as sugestões de presentes!', SYSDATE, 1, 1);
+INSERT INTO aviso VALUES(8, 'A troca de mensagens entre os participantes da 1° edição do sorteio está liberada', SYSDATE, 1, 1);
+INSERT INTO aviso VALUES(9, 'Em caso de dúvida entre em contato com um dos Administradores do sistema', SYSDATE, 1, 1);
+INSERT INTO aviso VALUES(10, 'Não esqueça de fazer sua avaliação após o término do sorteio!', SYSDATE, 1, 1);
+ 
+----- INSERT AVALIACAO -----
+
+insert into avaliacao values (1, 3.5, 'Faltou mais organização perante ao administrador', 6);
+insert into avaliacao values (2, 5, 'O tornei foi ótimo, não vejo a hora de começar outro sorteio', 1);
+insert into avaliacao values (3, 4, 'Não gostei do presente que recebi', 9);
+insert into avaliacao values (4, 4.9, 'Poderia der mais pessoas participando',  23);
+insert into avaliacao values (5, 5, 'Muito prazero participar desde amigo secreto', 8);
+insert into avaliacao values (6, 2, 'Recebi o melhor presente da minha vida', 4);
+insert into avaliacao values (7, 1, 'O meu amigo secreto acertou em cheio no que eu queria', 3);
+insert into avaliacao values (8, 5, 'Gostei de participar vou charmar os meus amigos de departamento para participarem', 2);
+insert into avaliacao values (9, 4.5, 'Quero receber outro presente inicitado, não vejo a hora de ter outro sorteio', 10);
+insert into avaliacao values (10, 5, 'Sensacional, parabéns pelos organizadores Henrique e Guilherme', 35);
+
+---- log_sorteio ----
+INSERT INTO log_sorteio VALUES(1, 0);
