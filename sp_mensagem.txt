@@ -1,0 +1,31 @@
+DROP SEQUENCE faixa_cd_mensagem;
+CREATE SEQUENCE faixa_cd_mensagem
+START WITH 1
+INCREMENT BY 1
+MAXVALUE 99999
+NOCACHE
+NOCYCLE;
+
+CREATE OR REPLACE PROCEDURE sp_mensagem(
+vMensagem mensagem.mensagem%type
+,vOrigem mensagem.origem_mensagem%type
+,vDestino mensagem.destino_mensagem%type
+
+) IS
+
+vCod mensagem.cd_mensagem%type;
+vApelido_Destino participante.apelido_participante%type;
+
+BEGIN 
+
+    SELECT faixa_cd_mensagem.NEXTVAL INTO vCod FROM DUAL;
+    SELECT apelido_participante INTO vApelido_Destino FROM participante WHERE cd_participante = vDestino;
+    
+    INSERT INTO mensagem
+    (cd_mensagem, mensagem, dt_mensagem, origem_mensagem, destino_mensagem)
+    VALUES
+    (vCod, vMensagem, SYSDATE, vOrigem, vDestino);
+    
+    DBMS_OUTPUT.PUT_LINE(' Mensagem enviada com sucesso para [' || vApelido_Destino || ']');
+
+END sp_mensagem;
